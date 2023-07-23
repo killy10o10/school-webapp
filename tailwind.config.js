@@ -7,6 +7,7 @@ export default withMT({
     extend: {
       colors: {
         'lime': '#57D657',
+        'dark-blue': '#00296B',
       },
       fontFamily: {
         inter: "'Inter', sans-serif",
