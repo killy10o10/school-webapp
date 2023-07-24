@@ -1,7 +1,10 @@
 import heroImage from '../assets/image.png';
 import background from '../assets/BG.svg';
 import lady from '../assets/lady.png';
-import { Button } from '@material-tailwind/react';
+import { Button, Carousel } from '@material-tailwind/react';
+import dataAnalysis from '../assets/data_an.png';
+import cyberSecurity from '../assets/cyber_security.png';
+import config from '../assets/config.png';
 
 function Home() {
   const styles = {
@@ -37,7 +40,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="min-h-[80vh] p-2 md:p-5  grid md:grid-cols-2 justify-center items-center">
+      <section className="min-h-[90vh] p-2 md:p-5  grid md:grid-cols-2 justify-center items-center">
         <div className="font-poppins h-4/5 flex items-center lg:ml-40 justify-center mt-10 md:mt-0">
           <div className=" flex flex-col gap-6">
             <h1 className="text-6xl font-bold text-dark-blue">
@@ -48,7 +51,10 @@ function Home() {
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
             </p>
-            <Button color="green" className="bg-lime text-white font-mono font-normal self-start capitalize">
+            <Button
+              color="green"
+              className="bg-lime text-white font-mono font-normal self-start capitalize"
+            >
               View More
             </Button>
           </div>
@@ -60,9 +66,73 @@ function Home() {
         </div>
       </section>
 
-      <section className="min-h-[40vh] bg-gradient-to-r from-lime to-dark-blue">
-
-      </section>
+      <Carousel>
+        <div className="bg-gradient-to-r from-lime to-dark-blue text-white animate-gradient-xy">
+          <h3 className="font-semibold text-5xl ml-8 p-5">Our courses</h3>
+          <section className="min-h-[50vh] gap-10 grid grid-cols-3 p-5">
+            <div className="flex text-center flex-col gap-10 items-center justify-center">
+              <img className="w-1/3" src={dataAnalysis} alt="" />
+              <h4 className="font-semibold text-2xl">Data Analysis</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+                voluptatem hic sit commodi, error delectus quidem, cum rerum
+                eaque eveniet
+              </p>
+            </div>
+            <div className="flex text-center flex-col gap-10 items-center justify-center">
+              <img className="w-1/3" src={config} alt="" />
+              <h4 className="font-semibold text-2xl">Data Analysis</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+                voluptatem hic sit commodi, error delectus quidem, cum rerum
+                eaque eveniet
+              </p>
+            </div>
+            <div className="flex text-center flex-col gap-10 items-center justify-center">
+              <img className="w-1/3" src={cyberSecurity} alt="" />
+              <h4 className="font-semibold text-2xl">Data Analysis</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+                voluptatem hic sit commodi, error delectus quidem, cum rerum
+                eaque eveniet
+              </p>
+            </div>
+          </section>
+        </div>
+        <div className="bg-gradient-to-r from-lime to-dark-blue text-white ">
+          <h3 className="font-semibold text-5xl ml-8 p-5">Our courses</h3>
+          <section className="min-h-[50vh] gap-10 grid grid-cols-3 p-5">
+            <div className="flex text-center flex-col gap-10 items-center justify-center">
+              <img className="w-1/3" src={dataAnalysis} alt="" />
+              <h4 className="font-semibold text-2xl">Data Analysis</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+                voluptatem hic sit commodi, error delectus quidem, cum rerum
+                eaque eveniet
+              </p>
+            </div>
+            <div className="flex text-center flex-col gap-10 items-center justify-center">
+              <img className="w-1/3" src={config} alt="" />
+              <h4 className="font-semibold text-2xl">Data Analysis</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+                voluptatem hic sit commodi, error delectus quidem, cum rerum
+                eaque eveniet
+              </p>
+            </div>
+            <div className="flex text-center flex-col gap-10 items-center justify-center">
+              <img className="w-1/3" src={cyberSecurity} alt="" />
+              <h4 className="font-semibold text-2xl">Data Analysis</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
+                voluptatem hic sit commodi, error delectus quidem, cum rerum
+                eaque eveniet
+              </p>
+            </div>
+          </section>
+        </div>
+        
+      </Carousel>
     </>
   );
 }
