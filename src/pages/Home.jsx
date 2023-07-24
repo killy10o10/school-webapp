@@ -67,7 +67,7 @@ function Home() {
       </section>
 
       <Carousel>
-        <div className="bg-gradient-to-r from-lime to-dark-blue text-white animate-gradient-xy">
+        <div className="bg-gradient-to-r from-lime to-dark-blue text-white animate-gradient-x">
           <h3 className="font-semibold text-5xl ml-8 p-5">Our courses</h3>
           <section className="min-h-[50vh] gap-10 grid grid-cols-3 p-5">
             <div className="flex text-center flex-col gap-10 items-center justify-center">
