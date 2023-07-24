@@ -2,7 +2,7 @@ import heroImage from '../assets/image.png';
 
 function Home() {
   return (
-    <section className="text-white p-2 md:p-5 h-screen grid md:grid-cols-2">
+    <section className="text-white p-2 md:p-5 min-h-screen grid md:grid-cols-2">
       <div className="font-poppins h-4/5 flex flex-col items-center justify-center mt-10 md:mt-0">
         <div className="lg:w-4/5 flex flex-col gap-6">
           <h1 className="text-6xl font-semibold lg:leading-normal">
