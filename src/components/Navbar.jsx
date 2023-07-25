@@ -6,15 +6,16 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
  
 function NavList() {
   return (
     <ul className="my-2 flex flex-col gap-2 font-mono lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 transition-all duration-700">
-      <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#home">Home</a></li>
+      <li className="flex items-center hover:text-blue-900 transition-all duration-700"><Link to="/">Home</Link></li>
       <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#about">About</a></li>
       <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#contact">Contact</a></li>
       <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#contact">Pricing</a></li>
-      <Button color="green" className="bg-lime font-mono font-normal capitalize text-base rounded-3xl py-2 px-5">Log In</Button>
+      <Link to="login" className="w-fit"><Button color="green" className="bg-lime font-mono font-normal capitalize text-base rounded-3xl py-2 px-5">Log In</Button></Link>
     </ul>
   );
 }
@@ -34,7 +35,7 @@ export default function NavigationBar() {
   }, []);
  
   return (
-    <Navbar className="sticky border-none p-4 top-0 text-white z-10 mx-auto max-w-full rounded-none shadow-none py-4 px-4 lg:px-8 lg:py-4 bg-gradient-to-r from-lime to-dark-blue">
+    <Navbar className="lg:sticky lg:z-10 lg:top-0 border-none p-4 lg:px-8 lg:py-4 text-white mx-auto max-w-full rounded-none shadow-none bg-gradient-to-r from-lime to-dark-blue">
       <div className="flex  items-center justify-center">
         <div className="hidden lg:block">
           <NavList />

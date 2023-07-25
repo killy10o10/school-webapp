@@ -1,10 +1,11 @@
-import heroImage from '../assets/image.png';
+import heroImage from '/image.png';
 import background from '../assets/BG.svg';
 import lady from '../assets/lady.png';
 import { Button, Carousel } from '@material-tailwind/react';
 import dataAnalysis from '../assets/data_an.png';
 import cyberSecurity from '../assets/cyber_security.png';
 import config from '../assets/config.png';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const styles = {
@@ -28,12 +29,14 @@ function Home() {
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
             </p>
+            <Link to="login" className="w-fit">
             <Button
               color="white"
               className="bg-white text-dark-blue font-mono rounded-3xl px-5 py-2 self-start capitalize text-base font-normal"
             >
               Apply Now
             </Button>
+            </Link>
           </div>
         </div>
         <div className="h-4/5 flex flex-col items-center justify-center">
