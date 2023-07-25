@@ -3,6 +3,7 @@ import {
   Navbar,
   Collapse,
   IconButton,
+  Button,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
  
@@ -13,7 +14,7 @@ function NavList() {
       <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#about">About</a></li>
       <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#contact">Contact</a></li>
       <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#contact">Pricing</a></li>
-      <button className="bg-lime font-mono rounded-3xl px-5 py-2">Log In</button>
+      <Button color="green" className="bg-lime font-mono font-normal capitalize text-base rounded-3xl py-2 px-5">Log In</Button>
     </ul>
   );
 }

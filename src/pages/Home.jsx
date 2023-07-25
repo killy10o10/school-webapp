@@ -28,9 +28,12 @@ function Home() {
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
             </p>
-            <button className="bg-white text-dark-blue font-mono rounded-3xl px-5 py-2 self-start">
+            <Button
+              color="white"
+              className="bg-white text-dark-blue font-mono rounded-3xl px-5 py-2 self-start capitalize text-base font-normal"
+            >
               Apply Now
-            </button>
+            </Button>
           </div>
         </div>
         <div className="h-4/5 flex flex-col items-center justify-center">
@@ -69,7 +72,7 @@ function Home() {
       <Carousel>
         <div className="bg-gradient-to-r from-lime to-dark-blue text-white animate-gradient-x">
           <h3 className="font-semibold text-5xl ml-8 p-5">Our courses</h3>
-          <section className="min-h-[50vh] gap-10 grid grid-cols-3 p-5">
+          <section className="min-h-[50vh] gap-10 grid lg:grid-cols-3 p-5">
             <div className="flex text-center flex-col gap-10 items-center justify-center">
               <img className="w-1/3" src={dataAnalysis} alt="" />
               <h4 className="font-semibold text-2xl">Data Analysis</h4>
@@ -99,9 +102,9 @@ function Home() {
             </div>
           </section>
         </div>
-        <div className="bg-gradient-to-r from-lime to-dark-blue text-white ">
+        <div className="bg-gradient-to-r from-lime to-dark-blue text-white animate-gradient-x">
           <h3 className="font-semibold text-5xl ml-8 p-5">Our courses</h3>
-          <section className="min-h-[50vh] gap-10 grid grid-cols-3 p-5">
+          <section className="min-h-[50vh] gap-10 grid lg:grid-cols-3 p-5">
             <div className="flex text-center flex-col gap-10 items-center justify-center">
               <img className="w-1/3" src={dataAnalysis} alt="" />
               <h4 className="font-semibold text-2xl">Data Analysis</h4>
@@ -131,7 +134,6 @@ function Home() {
             </div>
           </section>
         </div>
-        
       </Carousel>
     </>
   );
