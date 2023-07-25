@@ -1,4 +1,4 @@
-import heroImage from '../assets/image.png';
+import heroImage from '/image.png';
 import background from '../assets/BG.svg';
 import lady from '../assets/lady.png';
 import { Button, Carousel } from '@material-tailwind/react';
