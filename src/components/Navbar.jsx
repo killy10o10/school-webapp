@@ -3,6 +3,7 @@ import {
   Navbar,
   Collapse,
   IconButton,
+  Button,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
  
@@ -12,6 +13,8 @@ function NavList() {
       <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#home">Home</a></li>
       <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#about">About</a></li>
       <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#contact">Contact</a></li>
+      <li className="flex items-center hover:text-blue-900 transition-all duration-700"><a href="#contact">Pricing</a></li>
+      <Button color="green" className="bg-lime font-mono font-normal capitalize text-base rounded-3xl py-2 px-5">Log In</Button>
     </ul>
   );
 }
@@ -31,7 +34,7 @@ export default function NavigationBar() {
   }, []);
  
   return (
-    <Navbar className="sticky border-none p-4 top-0 text-white z-10 mx-auto max-w-full rounded-none shadow-none py-2 px-4 lg:px-8 lg:py-4 bg-transparent">
+    <Navbar className="sticky border-none p-4 top-0 text-white z-10 mx-auto max-w-full rounded-none shadow-none py-4 px-4 lg:px-8 lg:py-4 bg-gradient-to-r from-lime to-dark-blue">
       <div className="flex  items-center justify-center">
         <div className="hidden lg:block">
           <NavList />
