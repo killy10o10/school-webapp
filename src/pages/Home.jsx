@@ -29,7 +29,7 @@ function Home() {
               industry. Lorem Ipsum has been the industry&apos;s standard dummy
               text ever since the 1500s
             </p>
-            <Link to="login" className="w-fit">
+            <Link to="register" className="w-fit">
             <Button
               color="white"
               className="bg-white text-dark-blue font-mono rounded-3xl px-5 py-2 self-start capitalize text-base font-normal"
