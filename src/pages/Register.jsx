@@ -1,8 +1,23 @@
 import { Button, Card, CardBody, CardHeader, Input, Radio, Tab, TabPanel, Tabs, TabsBody, TabsHeader } from "@material-tailwind/react"
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Register() {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const {userName} = location.state
+
+  useEffect(() => {
+    if(location.state === null) {
+      navigate('/login')
+    }
+  }, [])
+
   return (
     <section className="min-h-screen flex justify-center px-2">
+      <p>welcome {userName}</p>
       <Card className="w-full max-w-xl lg:mx-20 my-10">
         <CardHeader color="blue-gray" className="m-0 grid place-items-center rounded-b-none py-8 px-4 text-center">Register here</CardHeader>
         <CardBody>
@@ -32,7 +47,6 @@ function Register() {
                   <h2 className="font-bold text-2xl">Confrim Infromation</h2>
                   <Button color="green" className="capitalize w-3/5 self-center">Confirm</Button>
                 </TabPanel>
-
             </TabsBody>
           </Tabs>
         </CardBody>
