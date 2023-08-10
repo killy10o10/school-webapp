@@ -1,42 +1,43 @@
 import { Button, Card, CardBody, CardHeader, Input, Radio, Tab, TabPanel, Tabs, TabsBody, TabsHeader } from "@material-tailwind/react"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function Register() {
+  const [userNameExist, setUserNameExist] = useState(false)
 
   const location = useLocation();
   const navigate = useNavigate();
 
-  const {userName} = location.state
-
   useEffect(() => {
     if(location.state === null) {
       navigate('/login')
+      setUserNameExist(false)
+    }
+    else{
+      setUserNameExist(true)
     }
   }, [])
 
   return (
-    <section className="min-h-screen flex justify-center px-2">
-      <p>welcome {userName}</p>
+    <section className="min-h-screen flex bg-blue-gray-50 px-2">
+     {userNameExist && <p>welcome {location.state.userName}</p> }
       <Card className="w-full max-w-xl lg:mx-20 my-10">
         <CardHeader color="blue-gray" className="m-0 grid place-items-center rounded-b-none py-8 px-4 text-center">Register here</CardHeader>
         <CardBody>
-          <Tabs className="overflow-visible" value="buy">
+          <Tabs className="overflow-visible" value="data">
             <TabsHeader className="relative z-0">
-              <Tab value="buy">Buy Voucher</Tab>
               <Tab value="data">Bio Data</Tab>
               <Tab value="confirm">Confirm</Tab>
             </TabsHeader>
             <TabsBody>
-                <TabPanel  value="buy" className="mt-12 flex flex-col gap-4 justify-center items-center">
-                  <Input label="Name"></Input>
-                  <Button color="green" className="capitalize">Buy voucher</Button>
-                </TabPanel>
                 <TabPanel value="data" className="flex flex-col ">
                <form className="mt-12 flex flex-col gap-4 ">
                     <Input label="Name"></Input>
-                    <Radio name="gender" label="Male"></Radio>
-                    <Radio name="gender" label="Female"></Radio>
+                    <div className="flex items-center justify-center">
+                      <label htmlFor="gender">Gender</label>
+                      <Radio name="gender" label="Male"></Radio>
+                      <Radio name="gender" label="Female"></Radio>
+                    </div>
                     <Input label="Contact" type="tel"></Input>
                     <Input label="Email" type="email"></Input>
                     <Input label="Nationality"></Input>
