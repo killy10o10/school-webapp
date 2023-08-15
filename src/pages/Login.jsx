@@ -45,7 +45,7 @@ function Login() {
   return (
     <section className="min-h-screen grid lg:grid-cols-2">
       <div className='bg-blue-900'>
-        <img className='object-contain h-[100%]' src={loginHero} alt="" />
+        <img className='object-contain h-[100%]' src={loginHero} alt="" loading="lazy" />
       </div>
       <div className='flex flex-col justify-center px-2 items-center bg-blue-gray-50'>
         <Typography variant="h2" color="gray" className="font-poppins">Login Here</Typography>

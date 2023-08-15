@@ -41,7 +41,7 @@ function Home() {
         </div>
         <div className="h-4/5 flex flex-col items-center justify-center">
           <div className="animate-slow-float">
-            <img src={heroImage} alt="" />
+            <img src={heroImage} alt="" loading="lazy" />
           </div>
         </div>
       </section>
@@ -67,7 +67,7 @@ function Home() {
         </div>
         <div className="h-4/5 flex flex-col items-center justify-center">
           <div className="lg:w-3/5 mt-20 md:mt-0">
-            <img className="" src={lady} alt="" />
+            <img className="" src={lady} alt="" loading="lazy" />
           </div>
         </div>
       </section>
@@ -77,7 +77,7 @@ function Home() {
           <h3 className="font-semibold text-5xl ml-8 p-5">Our courses</h3>
           <section className="min-h-[50vh] gap-10 grid lg:grid-cols-3 p-5">
             <div className="flex text-center flex-col gap-10 items-center justify-center">
-              <img className="w-1/3" src={dataAnalysis} alt="" />
+              <img className="w-1/3" src={dataAnalysis} alt="" loading="lazy" />
               <h4 className="font-semibold text-2xl">Data Analysis</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
@@ -86,7 +86,7 @@ function Home() {
               </p>
             </div>
             <div className="flex text-center flex-col gap-10 items-center justify-center">
-              <img className="w-1/3" src={config} alt="" />
+              <img className="w-1/3" src={config} alt="" loading="lazy" />
               <h4 className="font-semibold text-2xl">Data Analysis</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
@@ -95,7 +95,7 @@ function Home() {
               </p>
             </div>
             <div className="flex text-center flex-col gap-10 items-center justify-center">
-              <img className="w-1/3" src={cyberSecurity} alt="" />
+              <img className="w-1/3" src={cyberSecurity} alt="" loading="lazy" />
               <h4 className="font-semibold text-2xl">Data Analysis</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
@@ -109,7 +109,7 @@ function Home() {
           <h3 className="font-semibold text-5xl ml-8 p-5">Our courses</h3>
           <section className="min-h-[50vh] gap-10 grid lg:grid-cols-3 p-5">
             <div className="flex text-center flex-col gap-10 items-center justify-center">
-              <img className="w-1/3" src={dataAnalysis} alt="" />
+              <img className="w-1/3" src={dataAnalysis} alt="" loading="lazy" />
               <h4 className="font-semibold text-2xl">Data Analysis</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
@@ -118,7 +118,7 @@ function Home() {
               </p>
             </div>
             <div className="flex text-center flex-col gap-10 items-center justify-center">
-              <img className="w-1/3" src={config} alt="" />
+              <img className="w-1/3" src={config} alt="" loading="lazy" />
               <h4 className="font-semibold text-2xl">Data Analysis</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero
@@ -127,7 +127,7 @@ function Home() {
               </p>
             </div>
             <div className="flex text-center flex-col gap-10 items-center justify-center">
-              <img className="w-1/3" src={cyberSecurity} alt="" />
+              <img className="w-1/3" src={cyberSecurity} alt="" loading="lazy" />
               <h4 className="font-semibold text-2xl">Data Analysis</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero

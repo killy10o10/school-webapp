@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, CardHeader, Input, Radio, Tab, TabPanel, Tabs, TabsBody, TabsHeader, Typography } from "@material-tailwind/react"
+import { Button, Card, CardBody, CardHeader, Input, Option, Radio, Select, Tab, TabPanel, Tabs, TabsBody, TabsHeader, Typography } from "@material-tailwind/react"
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -20,9 +20,9 @@ function Register() {
 
   return (
     <section className="min-h-screen flex flex-col bg-blue-gray-50 px-2">
-     {userNameExist && <Typography variant="h4" className="font-poppins select-none lg:mx-10">welcome {location.state.userName}, Complete your registration here ⬇️</Typography> }
+     {userNameExist && <Typography variant="h4" className="font-poppins select-none lg:mx-10 lg:mt-5">welcome <span className="text-gray-600">{location.state.userName}</span></Typography> }
       <Card className="lg:mx-10 my-10">
-        <CardHeader color="blue-gray" className="m-0 grid place-items-center rounded-b-none py-8 px-4 text-center">Register here</CardHeader>
+        <CardHeader color="blue-gray" className="m-0 grid place-items-center rounded-b-none py-8 px-4 text-center">Complete your registration here ⬇️</CardHeader>
         <CardBody>
           <Tabs className="overflow-visible" value="bio-data-guardian-data">
             <TabsHeader className="relative z-0">
@@ -44,19 +44,36 @@ function Register() {
                       }}
                     >
                       <TabPanel value="bio-data">
-                        <form className="mt-12 flex flex-col lg:grid grid-cols-3 gap-4 ">
+                        <form className="mt-12 flex flex-col lg:grid grid-cols-3 lg:gap-20 gap-10">
                           <div className="grid gap-5">
-                            <Input label="Name"></Input>
-                            <Input label="Contact" type="tel"></Input>
-                            <Input label="Email" type="email"></Input>
-                            <Input label="Nationality"></Input>
+                            <Input label="Name" disabled />
+                            <Input label="Contact" type="tel"/>
+                            <Input label="Email" type="email"/>
+                            <Input label="Nationality"/>
                             <div className="flex items-center justify-center">
                               <label htmlFor="gender">Gender</label>
                               <Radio name="gender" label="Male"></Radio>
                               <Radio name="gender" label="Female"></Radio>
+                              <Radio name="gender" label="Rather not say"></Radio>
                             </div>
                           </div>
-                          <Button color="blue" className="capitalize self-center">Save and proceed</Button>
+                          <div className="grid gap-5">
+                            <Input label="date of birth" type="date"  />
+                            <Input label="Residential Address"  />
+                            <Input label="GPS Address"  />
+                            <Input label="Upload Picture. Limit: 24mb" type="file"  />
+                            <Select label="Select ID type">
+                             <Option>Passport</Option>
+                             <Option>Ghana Card</Option>
+                             <Option>Voter ID</Option>
+                             <Option>Driver License</Option>
+                            </Select>
+                          </div>
+                          <div className="flex flex-col justify-between">
+                            <Input label="IDD Number of the Document Selected"  />
+                            <Button color="blue" className="capitalize self-center">Save and proceed</Button>
+                          </div>
+                         
                         </form>
                       </TabPanel>
                       <TabPanel value="guardian-data">
